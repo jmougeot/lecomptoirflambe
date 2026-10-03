@@ -247,6 +247,15 @@ h1, h2 { font: 400 clamp(2.6rem, 6.5vw, 5rem)/.98 var(--serif); letter-spacing: 
 .page-head { padding: calc(var(--header-h) + clamp(56px, 9vw, 110px)) var(--gutter) clamp(48px, 7vw, 84px); text-align: center; }
 .page-head h1 { font-size: clamp(3.2rem, 9vw, 7rem); }
 .page-head .status { display: flex; justify-content: center; margin-top: 26px; }
+/* En-tête de page illustré, comme sur les cartes imprimées */
+.page-head--art { padding-top: var(--header-h); }
+.page-head__art {
+  width: calc(100% + 2 * var(--gutter)); max-width: none; height: clamp(230px, 36vw, 480px);
+  margin: 0 calc(-1 * var(--gutter)) clamp(4px, 1.5vw, 20px);
+  object-fit: cover; object-position: center 55%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent);
+  mask-image: linear-gradient(to bottom, #000 62%, transparent);
+}
 
 /* Choix de la langue : FR · DE · EN dans l'en-tête et le menu plein écran */
 .lang-mini { display: none; align-items: center; }
@@ -299,9 +308,22 @@ h1, h2 { font: 400 clamp(2.6rem, 6.5vw, 5rem)/.98 var(--serif); letter-spacing: 
 }
 .menu__part > .container { margin-top: clamp(28px, 4vw, 44px); }
 .menu__part .dishes { border-top: 1px solid var(--ink); }
+/* Illustration en bandeau : le ciel et le bas se fondent dans la page */
+.menu__art {
+  width: 100%; height: clamp(190px, 30vw, 400px); margin-bottom: clamp(20px, 3vw, 36px);
+  object-fit: cover; object-position: center 45%;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 38%, #000 72%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 38%, #000 72%, transparent);
+}
 .menu__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(32px, 6vw, 88px); }
 .menu__col h3 { margin: 0; padding-bottom: 14px; font: 400 1.7rem/1.1 var(--serif); letter-spacing: 0; }
 .menu__col .dishes + h3 { margin-top: 44px; }
+/* Les plats, dans l'esprit des cartes imprimées : tout en serif, composition en italique */
+.menu__col h3 { text-align: center; font-style: italic; }
+.menu__part .dishes b { font: 400 1.4rem/1.2 var(--serif); }
+.menu__part .dishes small { margin-top: 3px; font: italic 400 1.05rem/1.3 var(--serif); }
+.menu__part .dishes span { font: 400 1.3rem/1.2 var(--serif); }
+.menu__sub { font: italic 400 1.15rem/1.3 var(--serif); letter-spacing: 0; text-transform: none; color: var(--red); }
 .menu__note { margin: 56px 0 0; padding: 0 var(--gutter); text-align: center; font-size: .82rem; color: var(--muted); }
 
 /* ---------- La maison ---------- */
@@ -309,6 +331,7 @@ h1, h2 { font: 400 clamp(2.6rem, 6.5vw, 5rem)/.98 var(--serif); letter-spacing: 
 .house__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 7vw, 110px); align-items: center; }
 .house__photo { margin: 0; }
 .house__photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
+.house__photo--art img { aspect-ratio: 3 / 2; height: auto; }
 .house__text > p { max-width: 46ch; color: var(--muted); font-size: 1.05rem; }
 .house__text .titled { margin-bottom: 24px; }
 .house__text .btn { margin-top: 20px; }
@@ -431,6 +454,9 @@ html:not(.js) .infos__map { display: none; }
   .chips { justify-content: space-between; gap: 16px; overflow-x: auto; scrollbar-width: none; }
   .chips::-webkit-scrollbar { display: none; }
   .menu__grid { grid-template-columns: 1fr; gap: 44px; }
+  /* Une même liste coupée en deux colonnes : elle se recolle sur téléphone */
+  .menu__grid--one { gap: 0; }
+  .menu__grid--one .menu__col + .menu__col .dishes { border-top: 0; }
   .pillars li { grid-template-columns: 1fr; gap: 2px; }
   .gallery__track {
     display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;

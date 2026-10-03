@@ -63,7 +63,9 @@
   </div>
 
   <main>
-    <section class="page-head">
+    <section class="page-head page-head--art">
+      <!-- Illustration de Kaysersberg : son bas se fond dans la page -->
+      <img class="page-head__art" src="images/kaysersberg-fontaine.jpg" width="1600" height="800" alt="">
       <div class="titled titled--pair"><h1 data-de="Speisekarte" data-en="Menu">La carte</h1></div>
     </section>
 
@@ -81,16 +83,22 @@
       <!-- Une partie par famille. Traductions : data-de (allemand) et data-en (anglais) sur chaque texte à traduire. -->
       <section class="menu__part" id="tartes">
         <h2 data-de="Flammkuchen" data-en="Tartes flambées">Tartes flambées</h2>
-        <div class="container container--narrow">
-          <ul class="dishes">
-            <li><div><b>La Traditionnelle</b><small data-de="Sahne, Zwiebeln, Speck" data-en="Cream, onions, bacon">Crème, oignons, lardons</small></div><span>10,90 €</span></li>
-            <li><div><b>La Gratinée</b><small data-de="Sahne, Zwiebeln, Speck, überbackener Käse" data-en="Cream, onions, bacon, melted cheese">Crème, oignons, lardons, fromage gratiné</small></div><span>11,90 €</span></li>
-            <li><div><b>La Végétarienne</b><small data-de="Sahne, Champignons, Zwiebeln, Emmentaler" data-en="Cream, mushrooms, onions, Emmental">Crème, champignons, oignons, emmental</small></div><span>11,90 €</span></li>
-            <li><div><b>La Forestière</b><small data-de="Sahne, Zwiebeln, Speck, frische Champignons" data-en="Cream, onions, bacon, fresh mushrooms">Crème, oignons, lardons, champignons frais</small></div><span>12,90 €</span></li>
-            <li><div><b>La Chèvre-Miel</b><small data-de="Sahne, Ziegenkäse, Honig, Speck" data-en="Cream, goat's cheese, honey, bacon">Crème, fromage de chèvre, miel, lardons</small></div><span>12,90 €</span></li>
-            <li><div><b>La Saumon</b><small data-de="Sahne, Lachs, rote Zwiebeln, Schnittlauch, Zitrone" data-en="Cream, salmon, red onions, chives, lemon">Crème, saumon, oignons rouges, ciboulette, citron</small></div><span>13,90 €</span></li>
-            <li><div><b data-de="Gerollt zum Mitnehmen" data-en="Rolled to take away">Roulée à emporter</b><small data-de="Alle Sorten, gerollt zum Mitnehmen" data-en="Any tarte flambée, rolled up to go">Toutes les sortes, roulées pour l'emporter</small></div><span>− 2 €</span></li>
-          </ul>
+        <p class="menu__sub" data-de="Gerollt zum Mitnehmen: − 2 € auf alle Sorten" data-en="Rolled to take away: − 2 € on any tarte">Roulée à emporter : − 2 € sur toutes les sortes</p>
+        <div class="container menu__grid menu__grid--one">
+          <div class="menu__col">
+            <ul class="dishes">
+              <li><div><b>La Traditionnelle</b><small data-de="Sahne, Zwiebeln, Speck" data-en="Cream, onions, bacon">Crème, oignons, lardons</small></div><span>10,90 €</span></li>
+              <li><div><b>La Gratinée</b><small data-de="Sahne, Zwiebeln, Speck, überbackener Käse" data-en="Cream, onions, bacon, melted cheese">Crème, oignons, lardons, fromage gratiné</small></div><span>11,90 €</span></li>
+              <li><div><b>La Végétarienne</b><small data-de="Sahne, Champignons, Zwiebeln, Emmentaler" data-en="Cream, mushrooms, onions, Emmental">Crème, champignons, oignons, emmental</small></div><span>11,90 €</span></li>
+            </ul>
+          </div>
+          <div class="menu__col">
+            <ul class="dishes">
+              <li><div><b>La Forestière</b><small data-de="Sahne, Zwiebeln, Speck, frische Champignons" data-en="Cream, onions, bacon, fresh mushrooms">Crème, oignons, lardons, champignons frais</small></div><span>12,90 €</span></li>
+              <li><div><b>La Chèvre-Miel</b><small data-de="Sahne, Ziegenkäse, Honig, Speck" data-en="Cream, goat's cheese, honey, bacon">Crème, fromage de chèvre, miel, lardons</small></div><span>12,90 €</span></li>
+              <li><div><b>La Saumon</b><small data-de="Sahne, Lachs, rote Zwiebeln, Schnittlauch, Zitrone" data-en="Cream, salmon, red onions, chives, lemon">Crème, saumon, oignons rouges, ciboulette, citron</small></div><span>13,90 €</span></li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -162,6 +170,8 @@
       </section>
 
       <section class="menu__part" id="vins">
+        <!-- Le château de Kaysersberg au-dessus des vignes -->
+        <img class="menu__art" src="images/kaysersberg-chateau.png" width="1600" height="900" alt="" loading="lazy">
         <h2 data-de="Elsässer Weine" data-en="Alsace wines">Vins d'Alsace</h2>
         <div class="container container--narrow">
           <ul class="dishes">
