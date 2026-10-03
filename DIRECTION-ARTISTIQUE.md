@@ -145,7 +145,8 @@ Photos provisoires pour l'instant, à remplacer par celles du restaurant.
 - [ ] Logo en deux versions (claire pour la photo d'accueil, foncée pour le fond crème), puis recalage des couleurs dessus
 - [ ] Décider si le grand nom en lettres reste sur la photo d'accueil une fois le logo en place
 - [ ] Photos du restaurant
-- [ ] Vraie carte et vrais prix (ceux du site sont inventés), puis relecture des traductions allemande et anglaise et ajustement des trois colonnes
+- [x] Vraie carte et vrais prix (repris des quatre cartes imprimées)
+- [ ] Relecture des traductions allemande et anglaise de la carte
 - [ ] Numéro de téléphone (factice : 03 00 00 00 00)
 - [ ] Lien Instagram et mentions légales
 - [ ] Confirmer que « week-end » veut dire samedi et dimanche (9h – minuit)

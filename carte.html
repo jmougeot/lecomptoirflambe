@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>La carte · Le Comptoir Flambé, Kaysersberg</title>
-  <meta name="description" content="La carte du Comptoir Flambé : tartes flambées salées et sucrées au feu de bois, vins d'Alsace.">
+  <meta name="description" content="La carte du Comptoir Flambé : tartes flambées au feu de bois, petit déjeuner et brunch, cocktails et vins d'Alsace.">
   <meta name="theme-color" content="#1C1410">
 
   <!-- Polices chargées avant l'affichage, pour que le texte ne saute pas -->
@@ -71,50 +71,141 @@
 
     <section class="menu">
       <nav class="chips" aria-label="Catégories de la carte">
-        <a href="#salees" class="chip is-active" data-de="Herzhaft" data-en="Savoury">Salées</a>
-        <a href="#sucrees" class="chip" data-de="Süß" data-en="Sweet">Sucrées</a>
-        <a href="#cote" class="chip" data-de="Beilagen" data-en="Sides">À côté</a>
-        <a href="#boire" class="chip" data-de="Getränke" data-en="Drinks">À boire</a>
+        <a href="#tartes" class="chip is-active" data-de="Flammkuchen" data-en="Tartes flambées">Tartes</a>
+        <a href="#formules" class="chip" data-de="Brunch" data-en="Brunch">Brunch</a>
+        <a href="#boissons" class="chip" data-de="Getränke" data-en="Drinks">Boissons</a>
+        <a href="#vins" class="chip" data-de="Weine" data-en="Wines">Vins</a>
+        <a href="#cocktails" class="chip">Cocktails</a>
       </nav>
 
-      <!-- CARTE PROVISOIRE : remplacée par la vraie carte dès réception.
-           Traductions : data-de (allemand) et data-en (anglais) sur chaque texte à traduire. -->
-      <div class="container menu__grid">
-        <div class="menu__col">
-          <h2 id="salees" data-de="Flammkuchen" data-en="Tartes flambées">Tartes flambées</h2>
+      <!-- Une partie par famille. Traductions : data-de (allemand) et data-en (anglais) sur chaque texte à traduire. -->
+      <section class="menu__part" id="tartes">
+        <h2 data-de="Flammkuchen" data-en="Tartes flambées">Tartes flambées</h2>
+        <div class="container container--narrow">
           <ul class="dishes">
-            <li><div><b>La Traditionnelle</b><small data-de="Sahne, Quark, Zwiebeln, Speck" data-en="Cream, fromage blanc, onions, bacon">Crème, fromage blanc, oignons, lardons</small></div><span>11 €</span></li>
-            <li><div><b>La Gratinée</b><small data-de="Die Traditionelle mit Emmentaler" data-en="The Traditionnelle with Emmental">La traditionnelle, emmental</small></div><span>12 €</span></li>
-            <li><div><b>La Munster</b><small data-de="Sahne, Zwiebeln, Speck, Münsterkäse, Kümmel" data-en="Cream, onions, bacon, Munster cheese, caraway">Crème, oignons, lardons, munster, cumin</small></div><span>13,50 €</span></li>
-            <li><div><b>La Forestière</b><small data-de="Sahne, Zwiebeln, Speck, Champignons" data-en="Cream, onions, bacon, mushrooms">Crème, oignons, lardons, champignons</small></div><span>13 €</span></li>
-            <li><div><b>La Végétarienne</b><small data-de="Sahne, Zwiebeln, Gemüse der Saison" data-en="Cream, onions, seasonal vegetables">Crème, oignons, légumes de saison</small></div><span>12,50 €</span></li>
+            <li><div><b>La Traditionnelle</b><small data-de="Sahne, Zwiebeln, Speck" data-en="Cream, onions, bacon">Crème, oignons, lardons</small></div><span>10,90 €</span></li>
+            <li><div><b>La Gratinée</b><small data-de="Sahne, Zwiebeln, Speck, überbackener Käse" data-en="Cream, onions, bacon, melted cheese">Crème, oignons, lardons, fromage gratiné</small></div><span>11,90 €</span></li>
+            <li><div><b>La Végétarienne</b><small data-de="Sahne, Champignons, Zwiebeln, Emmentaler" data-en="Cream, mushrooms, onions, Emmental">Crème, champignons, oignons, emmental</small></div><span>11,90 €</span></li>
+            <li><div><b>La Forestière</b><small data-de="Sahne, Zwiebeln, Speck, frische Champignons" data-en="Cream, onions, bacon, fresh mushrooms">Crème, oignons, lardons, champignons frais</small></div><span>12,90 €</span></li>
+            <li><div><b>La Chèvre-Miel</b><small data-de="Sahne, Ziegenkäse, Honig, Speck" data-en="Cream, goat's cheese, honey, bacon">Crème, fromage de chèvre, miel, lardons</small></div><span>12,90 €</span></li>
+            <li><div><b>La Saumon</b><small data-de="Sahne, Lachs, rote Zwiebeln, Schnittlauch, Zitrone" data-en="Cream, salmon, red onions, chives, lemon">Crème, saumon, oignons rouges, ciboulette, citron</small></div><span>13,90 €</span></li>
+            <li><div><b data-de="Gerollt zum Mitnehmen" data-en="Rolled to take away">Roulée à emporter</b><small data-de="Alle Sorten, gerollt zum Mitnehmen" data-en="Any tarte flambée, rolled up to go">Toutes les sortes, roulées pour l'emporter</small></div><span>− 2 €</span></li>
           </ul>
         </div>
+      </section>
 
-        <div class="menu__col">
-          <h2 id="sucrees" data-de="Süße Flammkuchen" data-en="Sweet">Sucrées</h2>
+      <section class="menu__part" id="faim">
+        <h2 data-de="Kleiner Hunger" data-en="Small bites">Petite faim</h2>
+        <div class="container container--narrow">
           <ul class="dishes">
-            <li><div><b data-de="Apfel &amp; Zimt" data-en="Apple &amp; cinnamon">Pommes &amp; cannelle</b><small data-de="Mit Calvados flambiert" data-en="Flambéed with calvados">Flambée au calvados</small></div><span>9 €</span></li>
-            <li><div><b data-de="Heidelbeeren" data-en="Blueberries">Myrtilles</b><small data-de="Sahne, Heidelbeeren, Zucker" data-en="Cream, blueberries, sugar">Crème, myrtilles, sucre</small></div><span>9,50 €</span></li>
-          </ul>
-          <h2 id="cote" data-de="Beilagen" data-en="Sides">À côté</h2>
-          <ul class="dishes">
-            <li><div><b data-de="Grüner Salat" data-en="Green salad">Salade verte</b><small data-de="Hausgemachte Vinaigrette" data-en="House vinaigrette">Vinaigrette maison</small></div><span>5 €</span></li>
-            <li><div><b data-de="Brezel" data-en="Pretzel">Bretzel</b><small data-de="Gesalzene Butter" data-en="Salted butter">Beurre salé</small></div><span>4 €</span></li>
+            <li><div><b data-de="Pommes frites" data-en="Fries">Frites</b></div><span>3,90 €</span></li>
+            <li><div><b>Tenders</b><small data-de="4 Stück" data-en="4 pieces">4 pièces</small></div><span>5,90 €</span></li>
+            <li><div><b>Croque-monsieur</b><small data-de="Toastbrot, Pesto, Zwiebeln, Cheddar, Putenbrust" data-en="Toasted bread, pesto, onions, cheddar, turkey breast">Pain toaster, pesto, oignons, cheddar, blanc de dinde</small></div><span>6,90 €</span></li>
           </ul>
         </div>
+      </section>
 
-        <div class="menu__col">
-          <h2 id="boire" data-de="Getränke" data-en="Drinks">À boire</h2>
+      <section class="menu__part" id="formules">
+        <h2 data-de="Frühstück und Brunch" data-en="Breakfast and brunch">Petit déjeuner et brunch</h2>
+        <p class="menu__sub" data-de="Nur vor Ort" data-en="Served on site only">Servis uniquement sur place</p>
+        <div class="container menu__grid">
+          <div class="menu__col">
+            <h3 data-de="Die Menüs" data-en="Set menus">Les formules</h3>
+            <ul class="dishes">
+              <li><div><b data-de="Frühstück" data-en="Breakfast">Petit déjeuner</b><small data-de="Halbes Baguette mit Konfitüre und Butter, Croissant, weiches Ei oder Omelett, dazu Saft, Kaffee oder Tee" data-en="Half baguette with jam and butter, croissant, soft-boiled egg or omelette, and a juice, coffee or tea">Demi-baguette avec confiture et beurre, croissant, œuf à la coque ou omelette, et un jus, un café ou un thé</small></div><span>11,90 €</span></li>
+              <li><div><b>Brunch</b><small data-de="Zwei Getränke (Saft, Softdrink, Tee oder Kaffee), ein Gericht und ein Dessert nach Wahl: Waffel mit Nutella oder Zucker, Croissant mit Konfitüre oder Nutella" data-en="Two drinks (juice, soda, tea or coffee), one main and one dessert of your choice: waffle with Nutella or sugar, croissant with jam or Nutella">Deux boissons (jus, soda, thé ou café), un plat et un dessert au choix : gaufre Nutella ou sucrée, croissant confiture ou Nutella</small></div><span>21,90 €</span></li>
+            </ul>
+          </div>
+          <div class="menu__col">
+            <h3 data-de="Brunch-Gerichte zur Wahl" data-en="Brunch mains">Les plats du brunch</h3>
+            <ul class="dishes">
+              <li><div><b>Avocado toast</b><small data-de="Geröstetes Brot, Frischkäse, Avocadoscheiben, frischer Lachs oder wachsweiches Ei" data-en="Toasted bread, cream cheese, sliced avocado, fresh salmon or soft-boiled egg">Pain grillé, fromage frais, avocat en lamelles, saumon frais ou œuf mollet</small></div></li>
+              <li><div><b data-de="Hähnchen-Bagel" data-en="Chicken bagel">Bagel poulet</b><small data-de="Bagel, Pesto, rote Zwiebel, Hähnchenstreifen, Tomate, Salat" data-en="Bagel, pesto, red onion, chicken strips, tomato, lettuce">Pain bagel, pesto, oignon rouge, aiguillettes de poulet, tomate, salade</small></div></li>
+              <li><div><b>Croque-monsieur</b><small data-de="Toastbrot, Pesto, Cheddar, rote Zwiebeln, Putenbrust" data-en="Toasted bread, pesto, cheddar, red onions, turkey breast">Pain toaster, pesto, cheddar, oignons rouges, blanc de dinde</small></div></li>
+              <li><div><b data-de="Herzhaftes Croissant" data-en="Savoury croissant">Croissant salé</b><small data-de="Croissant, Frischkäse, Avocadoscheiben, frischer Lachs oder wachsweiches Ei" data-en="Croissant, cream cheese, sliced avocado, fresh salmon or soft-boiled egg">Croissant, fromage frais, avocat en lamelles, saumon frais ou œuf mollet</small></div></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu__part" id="boissons">
+        <h2 data-de="Getränke" data-en="Drinks">Boissons</h2>
+        <div class="container menu__grid">
+          <div class="menu__col">
+            <h3 data-de="Alkoholfrei" data-en="Alcohol-free">Sans alcool</h3>
+            <ul class="dishes">
+              <li><div><b data-de="Fruchtsaft" data-en="Fruit juice">Jus de fruits</b><small data-de="25 cl · Tomate, Banane, Pfirsich, Birne, ACE, Orange, Ananas, Erdbeere, Apfel" data-en="25 cl · Tomato, banana, peach, pear, ACE, orange, pineapple, strawberry, apple">25 cl · Tomate, banane, pêche, poire, ACE, orange, ananas, fraise, pomme</small></div><span>3,90 €</span></li>
+              <li><div><b data-de="Softdrinks" data-en="Sodas">Soda</b><small data-de="33 cl · Coca, Orangina, Schweppes Agrum oder Tonic" data-en="33 cl · Coke, Orangina, Schweppes citrus or tonic">33 cl · Coca, Orangina, Schweppes agrumes ou Tonic</small></div><span>3,80 €</span></li>
+              <li><div><b data-de="Wasser" data-en="Water">Eau</b><small data-de="50 cl · Carola still, Carola mit Kohlensäure, Perrier" data-en="50 cl · Carola still, Carola sparkling, Perrier">50 cl · Carola plate, Carola gazeuse, Perrier</small></div><span>3,50 €</span></li>
+              <li><div><b>Diabolo</b><small data-de="33 cl · Limonade mit Sirup: Erdbeere, Pfirsich, Minze, Grenadine, Veilchen, Zitrone, Maracuja" data-en="33 cl · Lemonade with syrup: strawberry, peach, mint, grenadine, violet, lemon, passion fruit">33 cl · Fraise, pêche, menthe, grenadine, violette, citron, fruit de la passion</small></div><span>2,80 €</span></li>
+              <li><div><b data-de="Limonade" data-en="Lemonade">Limonade</b><small>33 cl</small></div><span>2,50 €</span></li>
+              <li><div><b data-de="Sirup mit Wasser" data-en="Syrup with water">Sirop à l'eau</b><small data-de="33 cl · Erdbeere, Pfirsich, Minze, Grenadine, Veilchen, Zitrone, Maracuja" data-en="33 cl · Strawberry, peach, mint, grenadine, violet, lemon, passion fruit">33 cl · Fraise, pêche, menthe, grenadine, violette, citron, fruit de la passion</small></div><span>2 €</span></li>
+              <li><div><b>Red Bull</b><small>33 cl</small></div><span>4 €</span></li>
+            </ul>
+          </div>
+          <div class="menu__col">
+            <h3 data-de="Heiße Getränke" data-en="Hot drinks">Boissons chaudes</h3>
+            <ul class="dishes">
+              <li><div><b data-de="Espresso" data-en="Espresso">Expresso</b></div><span>2 €</span></li>
+              <li><div><b data-de="Verlängerter Espresso" data-en="Long coffee">Café allongé</b></div><span>2,50 €</span></li>
+              <li><div><b data-de="Tee" data-en="Tea">Thé</b></div><span>2,50 €</span></li>
+            </ul>
+            <h3 data-de="Biere" data-en="Beers">Bières</h3>
+            <ul class="dishes">
+              <li><div><b data-de="Vom Fass" data-en="Draught">Pression</b><small>25 cl · 50 cl</small></div><span>3,50 · 7 €</span></li>
+              <li><div><b>Desperados</b><small data-de="Flasche" data-en="Bottle">Bouteille</small></div><span>5 €</span></li>
+              <li><div><b>Heineken</b><small data-de="Flasche" data-en="Bottle">Bouteille</small></div><span>4 €</span></li>
+              <li><div><b>1664</b><small data-de="Flasche" data-en="Bottle">Bouteille</small></div><span>4 €</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu__part" id="vins">
+        <h2 data-de="Elsässer Weine" data-en="Alsace wines">Vins d'Alsace</h2>
+        <div class="container container--narrow">
           <ul class="dishes">
-            <li><div><b>Riesling</b><small data-de="Glas · Elsass" data-en="Glass · Alsace">Le verre · Alsace</small></div><span>5 €</span></li>
-            <li><div><b>Pinot gris</b><small data-de="Glas · Elsass" data-en="Glass · Alsace">Le verre · Alsace</small></div><span>5,50 €</span></li>
-            <li><div><b>Crémant d'Alsace</b><small data-de="Glas" data-en="Glass">La coupe</small></div><span>7 €</span></li>
-            <li><div><b data-de="Bier vom Fass" data-en="Draught beer">Bière pression</b><small data-de="Elsässische Brauerei · 25 cl" data-en="Alsatian brewery · 25 cl">Brasserie alsacienne · 25 cl</small></div><span>4,50 €</span></li>
-            <li><div><b data-de="Kaffee" data-en="Coffee">Café</b><small data-de="Ab Öffnung" data-en="From opening time">Dès l'ouverture</small></div><span>2 €</span></li>
+            <li><div><b>Riesling réserve personnelle</b><small>12 cl · 25 cl · 50 cl · 75 cl</small></div><span>4 · 8 · 16 · 24 €</span></li>
+            <li><div><b>Pinot gris, Côtes de Kaysersberg</b><small>12 cl · 25 cl · 50 cl · 75 cl</small></div><span>4 · 8 · 16 · 24 €</span></li>
+            <li><div><b>Gewurztraminer grand cru</b><small>12 cl · 25 cl · 50 cl · 75 cl</small></div><span>5 · 10 · 18 · 27 €</span></li>
+            <li><div><b>Crémant d'Alsace</b><small>12 cl · 25 cl · 50 cl · 75 cl</small></div><span>4,50 · 9 · 17 · 25 €</span></li>
+            <li><div><b>Sylvaner vieilles vignes</b><small>12 cl · 25 cl · 50 cl · 75 cl</small></div><span>3,50 · 7 · 14 · 21 €</span></li>
+            <li><div><b>Muscat d'Alsace</b><small>12 cl · 25 cl · 50 cl · 75 cl</small></div><span>4 · 8 · 15 · 23 €</span></li>
           </ul>
         </div>
-      </div>
+      </section>
+
+      <section class="menu__part" id="cocktails">
+        <h2 data-de="Cocktails und Spirituosen" data-en="Cocktails and spirits">Cocktails et alcools</h2>
+        <div class="container menu__grid">
+          <div class="menu__col">
+            <h3>Cocktails</h3>
+            <ul class="dishes">
+              <li><div><b>Cuba libre</b><small data-de="5 cl Rum, Cola, Limette" data-en="5 cl rum, Coke, lime">5 cl de rhum, Coca, citron vert</small></div><span>9 €</span></li>
+              <li><div><b>Gin tonic</b><small data-de="5 cl Gin, Tonic, Zitrone" data-en="5 cl gin, tonic, lemon">5 cl de gin, tonic, citron</small></div><span>8 €</span></li>
+              <li><div><b>Aperol Spritz</b><small data-de="6 cl Aperol, 9 cl Prosecco, 3 cl Sprudelwasser" data-en="6 cl Aperol, 9 cl Prosecco, 3 cl sparkling water">6 cl d'Aperol, 9 cl de Prosecco, 3 cl d'eau gazeuse</small></div><span>8 €</span></li>
+              <li><div><b>Mojito</b><small data-de="5 cl Rum, Limette, Zucker, Minze, Sprudelwasser" data-en="5 cl rum, lime, sugar, mint, sparkling water">5 cl de rhum, citron vert, sucre, menthe, eau gazeuse</small></div><span>9 €</span></li>
+              <li><div><b>Tequila sunrise</b><small data-de="5 cl Tequila, Orangensaft, Grenadine" data-en="5 cl tequila, orange juice, grenadine">5 cl de tequila, jus d'orange, grenadine</small></div><span>9 €</span></li>
+              <li><div><b data-de="Baileys Kaffee" data-en="Baileys coffee">Baileys café</b><small data-de="5 cl Baileys, Kaffee" data-en="5 cl Baileys, coffee">5 cl de Baileys, café</small></div><span>6 €</span></li>
+              <li><div><b data-de="Malibu Ananas oder Orange" data-en="Malibu pineapple or orange">Malibu ananas ou orange</b><small data-de="5 cl Malibu, Ananas- oder Orangensaft" data-en="5 cl Malibu, pineapple or orange juice">5 cl de Malibu, jus d'ananas ou jus d'orange</small></div><span>8 €</span></li>
+            </ul>
+          </div>
+          <div class="menu__col">
+            <h3 data-de="Spirituosen" data-en="Spirits">Alcools</h3>
+            <ul class="dishes">
+              <li><div><b>Whisky</b><small data-de="4 cl · Jack Daniel's: Apfel, Honig, Zimt, Brombeere oder Original" data-en="4 cl · Jack Daniel's: apple, honey, cinnamon, blackberry or original">4 cl · Jack Daniel's : pomme, miel, cannelle, mûre ou original</small></div><span>8 €</span></li>
+              <li><div><b data-de="Wodka" data-en="Vodka">Vodka</b><small>4 cl</small></div><span>8 €</span></li>
+              <li><div><b>Jägermeister</b><small>4 cl</small></div><span>7 €</span></li>
+              <li><div><b data-de="Rum" data-en="Rum">Rhum</b><small data-de="4 cl · Weiß oder braun" data-en="4 cl · White or amber">4 cl · Blanc ou ambré</small></div><span>7 €</span></li>
+              <li><div><b>Get 27</b><small>4 cl</small></div><span>5 €</span></li>
+              <li><div><b>Ricard</b><small>4 cl</small></div><span>4 €</span></li>
+              <li><div><b>Limoncello</b><small>5 cl</small></div><span>4 €</span></li>
+              <li><div><b>Baileys</b><small>4 cl</small></div><span>5 €</span></li>
+              <li><div><b data-de="Mit Softdrink" data-en="With a mixer">Avec un soft</b><small data-de="Coca, Schweppes, Fruchtsaft oder Red Bull" data-en="Coke, Schweppes, fruit juice or Red Bull">Coca, Schweppes, jus de fruits ou Red Bull</small></div><span>+ 2 €</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <p class="menu__note" data-de="Endpreise in Euro · Allergenliste auf Anfrage" data-en="Prices in euros, tax and service included · Allergen list on request">Prix nets en euros · Liste des allergènes sur demande</p>
     </section>
