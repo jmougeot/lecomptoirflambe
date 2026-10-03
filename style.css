@@ -57,7 +57,7 @@
   --paper: #FAF6EF;        /* crème */
   --red: #A8231C;          /* rouge Alsace */
   --red-dark: #8A1B15;
-  --muted: rgba(28, 20, 16, .62);
+  --muted: rgba(28, 20, 16, .72);
   --line: rgba(28, 20, 16, .14);
   --on-dark: #F4ECDF;
   --on-dark-muted: rgba(244, 236, 223, .62);
@@ -122,17 +122,25 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .btn--line { border-color: currentColor; }
 .btn--line:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
-/* ---------- Surtitre avec motif colombage (croix de Saint-André) ---------- */
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 10px;
-  margin: 0 0 18px;
-  font: 600 .74rem/1 var(--sans); letter-spacing: .2em; text-transform: uppercase;
-  color: var(--red);
+/* ---------- Grand titre accompagné de petits personnages en costume alsacien ----------
+   Quatre personnages (images/bonhomme-1.svg à 4), tirés au hasard à chaque visite par script.js.
+   .titled--pair : un couple encadre le titre, .titled--right : un seul personnage à droite. */
+.titled {
+  --fig-1: url("images/bonhomme-1.svg"); --fig-2: url("images/bonhomme-2.svg");
+  --fig-3: url("images/bonhomme-3.svg"); --fig-4: url("images/bonhomme-4.svg");
+  display: flex; align-items: flex-end; gap: clamp(12px, 2vw, 24px);
 }
-.eyebrow::before {
-  content: ""; width: 14px; height: 14px; flex: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none' stroke='%23A8231C' stroke-width='1.3'%3E%3Crect x='.65' y='.65' width='12.7' height='12.7'/%3E%3Cpath d='M1 1l12 12M13 1L1 13'/%3E%3C/svg%3E") center/contain no-repeat;
+.titled::before, .titled--pair::after {
+  content: ""; flex: none; height: clamp(64px, 9vw, 104px); aspect-ratio: 40 / 56;
+  background: var(--fig, var(--fig-1)) center bottom/contain no-repeat;
+  transform-origin: 50% 100%;
+  animation: sway 1.6s ease-in-out .3s both;
 }
+.titled--pair::after { background-image: var(--fig2, var(--fig-2)); animation-delay: .55s; }
+.titled--right::before { order: 2; }
+.section-head .titled, .page-head .titled { justify-content: center; max-width: 860px; margin-inline: auto; }
+/* Petit salut à l'arrivée */
+@keyframes sway { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-7deg); } 60% { transform: rotate(5deg); } 85% { transform: rotate(-2deg); } }
 
 /* ---------- Nappe à carreaux ---------- */
 .kelsch {
@@ -164,7 +172,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .header__nav a { position: relative; font-size: .92rem; text-decoration: none; opacity: .8; transition: opacity .2s; }
 .header__nav a:hover, .header__nav a[aria-current] { opacity: 1; }
 .header__nav a[aria-current]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1px; background: currentColor; }
-.header__cta { display: flex; gap: 10px; }
+.header__cta { display: flex; align-items: center; gap: 10px; }
 
 .burger {
   display: none;
@@ -212,9 +220,10 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   overflow: hidden;
 }
 .hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); animation: heroZoom 14s ease-out forwards; }
-.hero__shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,12,8,.55) 0%, rgba(20,12,8,.1) 35%, rgba(20,12,8,.8) 100%); }
-.hero__content { position: relative; padding: 0 var(--gutter) clamp(48px, 9vh, 96px); max-width: 1000px; }
-.hero__kicker { margin: 0 0 14px; font: 500 .74rem/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; opacity: .85; }
+/* Voile sombre : assez dense sous le texte pour rester lisible même sur une zone claire de la photo */
+.hero__shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,12,8,.6) 0%, rgba(20,12,8,.2) 25%, rgba(20,12,8,.66) 50%, rgba(20,12,8,.88) 100%); }
+.hero__content { position: relative; text-shadow: 0 1px 16px rgba(20, 12, 8, .5); padding: 0 var(--gutter) clamp(48px, 9vh, 96px); max-width: 1000px; }
+.hero__kicker { margin: 0 0 14px; font: 600 .74rem/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; }
 .hero__title { font: 400 clamp(3.6rem, 12vw, 9.5rem)/.9 var(--serif); letter-spacing: -.02em; }
 .hero__title em { display: inline-block; }
 .hero__tagline { margin: 22px auto 30px; max-width: 34ch; font-size: clamp(1rem, 1.6vw, 1.15rem); opacity: .9; }
@@ -232,17 +241,21 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 /* ---------- Titres ---------- */
 h1, h2 { font: 400 clamp(2.6rem, 6.5vw, 5rem)/.98 var(--serif); letter-spacing: -.015em; }
 .section-head { text-align: center; margin-bottom: 28px; }
+.section-head h2 { font-size: clamp(2.2rem, 5vw, 4rem); }
 
 /* En-tête des pages intérieures */
 .page-head { padding: calc(var(--header-h) + clamp(56px, 9vw, 110px)) var(--gutter) clamp(48px, 7vw, 84px); text-align: center; }
 .page-head h1 { font-size: clamp(3.2rem, 9vw, 7rem); }
 .page-head .status { display: flex; justify-content: center; margin-top: 26px; }
 
-/* Choix de la langue (page carte) */
-.langs { display: none; justify-content: center; gap: 4px; margin-top: 22px; }
-.js .langs { display: flex; }
-.langs button { min-height: 44px; padding: 0 14px; font-size: .88rem; color: var(--muted); }
-.langs button[aria-pressed="true"] { color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 6px; }
+/* Choix de la langue : FR · DE · EN dans l'en-tête et le menu plein écran */
+.lang-mini { display: none; align-items: center; }
+.js .lang-mini { display: flex; }
+.lang-mini button { min-height: 40px; padding: 0 7px; font: 500 .72rem/1 var(--sans); letter-spacing: .1em; opacity: .78; }
+.lang-mini button[aria-pressed="true"] { opacity: 1; text-decoration: underline; text-underline-offset: 5px; }
+.overlay .lang-mini { margin: 10px 0 0 -7px; }
+.overlay .lang-mini button { min-height: 44px; color: var(--on-dark); }
+
 
 /* ---------- Plats ---------- */
 .dishes { list-style: none; margin: 0; padding: 0; }
@@ -294,7 +307,7 @@ h1, h2 { font: 400 clamp(2.6rem, 6.5vw, 5rem)/.98 var(--serif); letter-spacing: 
 .house__photo { margin: 0; }
 .house__photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
 .house__text > p { max-width: 46ch; color: var(--muted); font-size: 1.05rem; }
-.house__text h2 { margin-bottom: 24px; }
+.house__text .titled { margin-bottom: 24px; }
 .house__text .btn { margin-top: 20px; }
 
 .pillars { list-style: none; margin: 36px 0 0; padding: 0; border-top: 1px solid var(--line); }
@@ -325,6 +338,8 @@ h1, h2 { font: 400 clamp(2.6rem, 6.5vw, 5rem)/.98 var(--serif); letter-spacing: 
 .hours td { text-align: right; font-variant-numeric: tabular-nums; }
 .hours tr.is-today th, .hours tr.is-today td { color: var(--ink); font-weight: 600; }
 .hours tr.is-today th::after { content: " · aujourd'hui"; font-weight: 400; color: var(--muted); }
+html[lang="de"] .hours tr.is-today th::after { content: " · heute"; }
+html[lang="en"] .hours tr.is-today th::after { content: " · today"; }
 .infos__map > * { display: block; width: 100%; aspect-ratio: 4 / 4.2; border-radius: var(--radius); }
 .infos__map iframe { border: 0; filter: grayscale(1) sepia(.25) contrast(1.05); }
 .map-consent {
@@ -433,5 +448,6 @@ html:not(.js) .infos__map { display: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .overlay, .overlay__nav a { transition: none; }
   .stork-fly { animation: none; transform: translate(62vw, 0); }
+  .titled::before, .titled--pair::after { animation: none; }
   .stork-fly .wing-front, .stork-fly .wing-back { animation: none; }
 }

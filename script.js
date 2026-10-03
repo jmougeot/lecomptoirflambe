@@ -9,7 +9,31 @@ const HOURS = {
   6: [9, 24],
 };
 
-const fmt = (h) => (h === 24 ? 'minuit' : `${h}h`);
+// Langue en cours : 'fr', 'de' ou 'en' (choisie tout en bas de ce fichier)
+let lang = 'fr';
+const WORDS = {
+  fr: {
+    hour: (h) => (h === 24 ? 'minuit' : `${h}h`),
+    open: (t) => `Ouvert maintenant · jusqu'à ${t}`,
+    today: (t) => `Fermé · ouvre à ${t}`,
+    tomorrow: (t) => `Fermé · ouvre demain à ${t}`,
+    map: 'Le Comptoir Flambé sur la carte',
+  },
+  de: {
+    hour: (h) => (h === 24 ? 'Mitternacht' : `${h} Uhr`),
+    open: (t) => `Jetzt geöffnet · bis ${t}`,
+    today: (t) => `Geschlossen · öffnet um ${t}`,
+    tomorrow: (t) => `Geschlossen · öffnet morgen um ${t}`,
+    map: 'Le Comptoir Flambé auf der Karte',
+  },
+  en: {
+    hour: (h) => (h === 24 ? 'midnight' : `${h > 12 ? h - 12 : h} ${h >= 12 ? 'pm' : 'am'}`),
+    open: (t) => `Open now · until ${t}`,
+    today: (t) => `Closed · opens at ${t}`,
+    tomorrow: (t) => `Closed · opens tomorrow at ${t}`,
+    map: 'Le Comptoir Flambé on the map',
+  },
+};
 
 // Jour et heure actuels à Kaysersberg, quel que soit le fuseau du visiteur
 function parisNow() {
@@ -26,11 +50,12 @@ function updateStatus() {
   const { day, time } = parisNow();
   const [open, close] = HOURS[day];
   const isOpen = time >= open && time < close;
-  let label = `Ouvert maintenant · jusqu'à ${fmt(close)}`;
+  const words = WORDS[lang];
+  let label = words.open(words.hour(close));
   if (!isOpen) {
     label = time < open
-      ? `Fermé · ouvre à ${fmt(open)}`
-      : `Fermé · ouvre demain à ${fmt(HOURS[(day + 1) % 7][0])}`;
+      ? words.today(words.hour(open))
+      : words.tomorrow(words.hour(HOURS[(day + 1) % 7][0]));
   }
 
   document.querySelectorAll('[data-status]').forEach((status) => {
@@ -105,32 +130,44 @@ chips.forEach((chip) => {
   if (target) spy.observe(target);
 });
 
-// Page carte : français, allemand ou anglais (textes dans data-de et data-en)
+// Personnages alsaciens à côté des grands titres, tirés au hasard à chaque visite.
+// Titres centrés : un couple (une Alsacienne, un Alsacien) de part et d'autre. Sinon : un seul personnage.
+const pick = (list) => list[Math.floor(Math.random() * list.length)];
+document.querySelectorAll('.titled').forEach((title) => {
+  const couple = [pick([1, 3]), pick([2, 4])];
+  if (Math.random() < 0.5) couple.reverse();
+  title.style.setProperty('--fig', `var(--fig-${couple[0]})`);
+  title.style.setProperty('--fig2', `var(--fig-${couple[1]})`);
+});
+
+// Langue : français, allemand ou anglais sur tout le site.
+// Chaque texte à traduire porte ses versions dans data-de et data-en.
 const langButtons = [...document.querySelectorAll('[data-lang]')];
-if (langButtons.length) {
-  const texts = [...document.querySelectorAll('[data-de]')];
-  texts.forEach((el) => { el.dataset.fr = el.textContent; });
-  const setLang = (lang) => {
-    texts.forEach((el) => { el.textContent = el.dataset[lang]; el.lang = lang; });
-    langButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
-  };
-  langButtons.forEach((button) => button.addEventListener('click', () => {
-    setLang(button.dataset.lang);
-    try { localStorage.setItem('lang', button.dataset.lang); } catch (e) { /* stockage indisponible */ }
-  }));
-  // Au premier passage : la langue du navigateur, sinon l'anglais pour les visiteurs non francophones
-  let saved = null;
-  try { saved = localStorage.getItem('lang'); } catch (e) { /* stockage indisponible */ }
-  const browser = (navigator.language || 'fr').slice(0, 2);
-  const start = ['fr', 'de', 'en'].includes(saved) ? saved : (['fr', 'de'].includes(browser) ? browser : 'en');
-  if (start !== 'fr') setLang(start);
+const texts = [...document.querySelectorAll('[data-de]')];
+texts.forEach((el) => { el.dataset.fr = el.innerHTML; });
+function setLang(next) {
+  lang = next;
+  document.documentElement.lang = lang;
+  texts.forEach((el) => { el.innerHTML = el.dataset[lang]; });
+  langButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
+  updateStatus();
 }
+langButtons.forEach((button) => button.addEventListener('click', () => {
+  setLang(button.dataset.lang);
+  try { localStorage.setItem('lang', lang); } catch (e) { /* stockage indisponible */ }
+}));
+// Au premier passage : la langue du téléphone, sinon l'anglais pour les visiteurs non francophones
+let saved = null;
+try { saved = localStorage.getItem('lang'); } catch (e) { /* stockage indisponible */ }
+const browser = (navigator.language || 'fr').slice(0, 2);
+const start = ['fr', 'de', 'en'].includes(saved) ? saved : (['fr', 'de'].includes(browser) ? browser : 'en');
+if (start !== 'fr') setLang(start);
 
 // Page infos : le plan Google ne se charge qu'à la demande
 document.querySelectorAll('[data-map]').forEach((box) => {
   box.querySelector('button').addEventListener('click', () => {
     const frame = document.createElement('iframe');
-    frame.title = 'Le Comptoir Flambé sur la carte';
+    frame.title = WORDS[lang].map;
     frame.src = box.dataset.map;
     box.replaceChildren(frame);
   });

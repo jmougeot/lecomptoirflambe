@@ -24,38 +24,47 @@
       Le Comptoir <em>Flambé</em>
     </a>
     <nav class="header__nav" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="carte.html">La carte</a>
-      <a href="infos.html" aria-current="page">Infos &amp; horaires</a>
+      <a href="index.html" data-de="Startseite" data-en="Home">Accueil</a>
+      <a href="carte.html" data-de="Speisekarte" data-en="Menu">La carte</a>
+      <a href="infos.html" aria-current="page" data-de="Infos &amp;amp; Öffnungszeiten" data-en="Info &amp;amp; hours">Infos &amp; horaires</a>
     </nav>
     <div class="header__cta">
-      <a href="tel:+33300000000" class="btn btn--line btn--sm">Appeler</a>
+      <div class="lang-mini" role="group" aria-label="Langue">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="tel:+33300000000" class="btn btn--line btn--sm" data-de="Anrufen" data-en="Call">Appeler</a>
     </div>
-    <button class="burger" type="button" aria-expanded="false" aria-controls="overlay">Menu</button>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="overlay" data-de="Menü" data-en="Menu">Menu</button>
   </header>
 
   <!-- ============ MENU PLEIN ÉCRAN (mobile) ============ -->
   <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Menu">
     <div class="overlay__top">
       <a href="index.html" class="brand">Le Comptoir <em>Flambé</em></a>
-      <button class="overlay__close" type="button">Fermer</button>
+      <button class="overlay__close" type="button" data-de="Schließen" data-en="Close">Fermer</button>
     </div>
     <nav class="overlay__nav">
-      <a href="index.html">Accueil</a>
-      <a href="carte.html">La carte</a>
-      <a href="infos.html" aria-current="page">Infos &amp; horaires</a>
+      <a href="index.html" data-de="Startseite" data-en="Home">Accueil</a>
+      <a href="carte.html" data-de="Speisekarte" data-en="Menu">La carte</a>
+      <a href="infos.html" aria-current="page" data-de="Infos &amp;amp; Öffnungszeiten" data-en="Info &amp;amp; hours">Infos &amp; horaires</a>
     </nav>
     <div class="overlay__info">
       <p>9 rue du Général Rieder · Kaysersberg</p>
       <a href="tel:+33300000000">03 00 00 00 00</a>
+      <div class="lang-mini" role="group" aria-label="Langue">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </div>
     <svg class="village" aria-hidden="true" width="100%" height="160" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="village" width="600" height="160" patternUnits="userSpaceOnUse" x="0" y="0"><g transform="translate(0 8)"><g class="lines"><path d="M0 150V72H90V150"/><path d="M-6 76L45 18L96 76"/><path d="M0 110L90 110"/><path d="M45 72L45 110"/><path d="M0 110L19.8 72"/><path d="M90 110L70.2 72"/><path d="M20.25 49L69.75 49"/><path d="M45 72L45 49"/><rect x="14" y="82" width="11" height="15"/><rect x="65" y="82" width="11" height="15"/><rect x="14" y="122" width="11" height="15"/><path d="M52 150V128a8 8 0 0 1 16 0V150"/><path d="M90 150V84H210V150"/><path d="M84 87L110 46H190L216 87"/><path d="M90 118L210 118"/><path d="M120 84L120 118"/><path d="M150 84L150 118"/><path d="M180 84L180 118"/><path d="M90 118L120 84"/><path d="M210 118L180 84"/><path d="M120 118L150 84"/><path d="M180 118L150 84"/><rect x="106" y="92" width="11" height="15"/><rect x="146" y="92" width="11" height="15"/><rect x="184" y="92" width="11" height="15"/><rect x="106" y="126" width="11" height="15"/><rect x="184" y="126" width="11" height="15"/><path d="M168 48V30H179V48"/><path d="M210 150V62H290V150"/><path d="M204 66L250 4L296 66"/><path d="M210 96L290 96"/><path d="M210 124L290 124"/><path d="M250 62L250 96"/><path d="M210 96L227.6 62"/><path d="M290 96L272.4 62"/><path d="M250 96L250 124"/><path d="M210 124L227.6 96"/><path d="M290 124L272.4 96"/><path d="M228 37L272 37"/><path d="M250 62L250 37"/><rect x="222" y="70" width="11" height="15"/><rect x="258" y="70" width="11" height="15"/><rect x="222" y="102" width="11" height="15"/><rect x="258" y="102" width="11" height="15"/><rect x="242" y="130" width="16" height="20"/><path d="M290 150V80H388V150"/><path d="M284 84L339 28L394 84"/><path d="M290 116L388 116"/><path d="M339 80L339 116"/><path d="M290 116L311.56 80"/><path d="M388 116L366.44 80"/><path d="M312.05 58L365.95 58"/><path d="M339 80L339 58"/><rect x="304" y="88" width="11" height="15"/><rect x="363" y="88" width="11" height="15"/><rect x="304" y="124" width="11" height="15"/><rect x="363" y="124" width="11" height="15"/><path d="M388 150V76H528V150"/><path d="M382 79L408 38H508L534 79"/><path d="M388 114L528 114"/><path d="M423 76L423 114"/><path d="M458 76L458 114"/><path d="M493 76L493 114"/><path d="M388 114L423 76"/><path d="M528 114L493 76"/><path d="M423 114L458 76"/><path d="M493 114L458 76"/><rect x="402" y="84" width="11" height="15"/><rect x="440" y="84" width="11" height="15"/><rect x="476" y="84" width="11" height="15"/><rect x="506" y="84" width="11" height="15"/><rect x="402" y="122" width="11" height="15"/><rect x="476" y="122" width="11" height="15"/><path d="M440 150V130a9 9 0 0 1 18 0V150"/><path d="M528 150V86H600V150"/><path d="M522 90L564 36L606 90"/><path d="M528 118L600 118"/><path d="M564 86L564 118"/><path d="M528 118L543.84 86"/><path d="M600 118L584.16 86"/><path d="M544.2 65L583.8 65"/><path d="M564 86L564 65"/><rect x="540" y="94" width="11" height="15"/><rect x="574" y="94" width="11" height="15"/><rect x="556" y="126" width="11" height="15"/><path d="M0 150H600"/></g></g></pattern></defs><rect width="100%" height="160" fill="url(#village)"/><g class="stork" transform="translate(0 8)"><path class="nest" d="M161.5 30q12 6 24 0M160.5 28l7 3M169.5 27l6 4M178.5 27l7 3"/><path class="fill" d="M162.5 23c3-6 13-7 18-3 3-5 2-10 1-15a3.2 3.2 0 1 1 3-1c1 6 1 12-2 17-4 4-14 5-20 2z"/><path class="beak" d="M184.5 5l12 3-12-.6z"/></g></svg>
   </div>
 
   <main>
     <section class="page-head">
-      <p class="eyebrow">Infos &amp; horaires</p>
-      <h1>On vous <em>attend.</em></h1>
+      <div class="titled titled--pair"><h1 data-de="Wir freuen uns &lt;em&gt;auf Sie.&lt;/em&gt;" data-en="We look forward &lt;em&gt;to seeing you.&lt;/em&gt;">On vous <em>attend.</em></h1></div>
       <p class="status status--ink" data-status aria-live="polite"><span class="status__dot"></span><span class="status__text">Ouvert 7j/7</span></p>
     </section>
 
@@ -65,26 +74,26 @@
       <div class="container infos__grid">
         <div class="infos__text">
           <div class="infos__block">
-            <h2>Adresse</h2>
+            <h2 data-de="Adresse" data-en="Address">Adresse</h2>
             <p>9 rue du Général Rieder<br>68240 Kaysersberg</p>
-            <a class="link" href="https://www.google.com/maps/search/?api=1&query=9+rue+du+G%C3%A9n%C3%A9ral+Rieder+68240+Kaysersberg" target="_blank" rel="noopener">Itinéraire</a>
+            <a class="link" href="https://www.google.com/maps/search/?api=1&query=9+rue+du+G%C3%A9n%C3%A9ral+Rieder+68240+Kaysersberg" target="_blank" rel="noopener" data-de="Route" data-en="Directions">Itinéraire</a>
           </div>
 
           <div class="infos__block">
-            <h2>Horaires</h2>
+            <h2 data-de="Öffnungszeiten" data-en="Opening hours">Horaires</h2>
             <table class="hours" id="hours">
-              <tr data-day="1"><th>Lundi</th><td>8h – 23h</td></tr>
-              <tr data-day="2"><th>Mardi</th><td>8h – 23h</td></tr>
-              <tr data-day="3"><th>Mercredi</th><td>8h – 23h</td></tr>
-              <tr data-day="4"><th>Jeudi</th><td>8h – 23h</td></tr>
-              <tr data-day="5"><th>Vendredi</th><td>8h – 23h</td></tr>
-              <tr data-day="6"><th>Samedi</th><td>9h – minuit</td></tr>
-              <tr data-day="0"><th>Dimanche</th><td>9h – minuit</td></tr>
+              <tr data-day="1"><th data-de="Montag" data-en="Monday">Lundi</th><td data-de="8 – 23 Uhr" data-en="8 am – 11 pm">8h – 23h</td></tr>
+              <tr data-day="2"><th data-de="Dienstag" data-en="Tuesday">Mardi</th><td data-de="8 – 23 Uhr" data-en="8 am – 11 pm">8h – 23h</td></tr>
+              <tr data-day="3"><th data-de="Mittwoch" data-en="Wednesday">Mercredi</th><td data-de="8 – 23 Uhr" data-en="8 am – 11 pm">8h – 23h</td></tr>
+              <tr data-day="4"><th data-de="Donnerstag" data-en="Thursday">Jeudi</th><td data-de="8 – 23 Uhr" data-en="8 am – 11 pm">8h – 23h</td></tr>
+              <tr data-day="5"><th data-de="Freitag" data-en="Friday">Vendredi</th><td data-de="8 – 23 Uhr" data-en="8 am – 11 pm">8h – 23h</td></tr>
+              <tr data-day="6"><th data-de="Samstag" data-en="Saturday">Samedi</th><td data-de="9 Uhr – Mitternacht" data-en="9 am – midnight">9h – minuit</td></tr>
+              <tr data-day="0"><th data-de="Sonntag" data-en="Sunday">Dimanche</th><td data-de="9 Uhr – Mitternacht" data-en="9 am – midnight">9h – minuit</td></tr>
             </table>
           </div>
 
           <div class="infos__block">
-            <h2>Téléphone</h2>
+            <h2 data-de="Telefon" data-en="Phone">Téléphone</h2>
             <!-- Numéro à venir -->
             <a class="infos__phone" href="tel:+33300000000">03 00 00 00 00</a>
           </div>
@@ -93,8 +102,8 @@
         <!-- Le plan Google ne se charge qu'au clic : aucun cookie avant, donc pas de bandeau -->
         <div class="infos__map" data-map="https://maps.google.com/maps?q=9%20rue%20du%20G%C3%A9n%C3%A9ral%20Rieder%2C%2068240%20Kaysersberg&z=16&output=embed">
           <div class="map-consent">
-            <p>Le plan est fourni par Google Maps, qui peut déposer des cookies.</p>
-            <button type="button" class="btn btn--line">Afficher le plan</button>
+            <p data-de="Die Karte wird von Google Maps bereitgestellt, das Cookies setzen kann." data-en="The map is provided by Google Maps, which may set cookies.">Le plan est fourni par Google Maps, qui peut déposer des cookies.</p>
+            <button type="button" class="btn btn--line" data-de="Karte anzeigen" data-en="Show the map">Afficher le plan</button>
           </div>
         </div>
       </div>
@@ -113,23 +122,23 @@
       <p class="footer__brand">Le Comptoir <em>Flambé</em></p>
       <div class="footer__cols">
         <div>
-          <h3>Adresse</h3>
+          <h3 data-de="Adresse" data-en="Address">Adresse</h3>
           <p>9 rue du Général Rieder<br>68240 Kaysersberg</p>
-          <a class="link" href="https://www.google.com/maps/search/?api=1&query=9+rue+du+G%C3%A9n%C3%A9ral+Rieder+68240+Kaysersberg" target="_blank" rel="noopener">Itinéraire</a>
+          <a class="link" href="https://www.google.com/maps/search/?api=1&query=9+rue+du+G%C3%A9n%C3%A9ral+Rieder+68240+Kaysersberg" target="_blank" rel="noopener" data-de="Route" data-en="Directions">Itinéraire</a>
         </div>
         <div>
-          <h3>Horaires</h3>
-          <p>Lundi – vendredi · 8h – 23h<br>Samedi – dimanche · 9h – minuit</p>
+          <h3 data-de="Öffnungszeiten" data-en="Opening hours">Horaires</h3>
+          <p data-de="Montag – Freitag · 8 – 23 Uhr&lt;br&gt;Samstag – Sonntag · 9 Uhr – Mitternacht" data-en="Monday – Friday · 8 am – 11 pm&lt;br&gt;Saturday – Sunday · 9 am – midnight">Lundi – vendredi · 8h – 23h<br>Samedi – dimanche · 9h – minuit</p>
         </div>
         <div>
-          <h3>Téléphone</h3>
+          <h3 data-de="Telefon" data-en="Phone">Téléphone</h3>
           <!-- Numéro à venir -->
           <p><a href="tel:+33300000000">03 00 00 00 00</a></p>
         </div>
       </div>
       <nav class="footer__links">
         <a href="#">Instagram</a>
-        <a href="#">Mentions légales</a>
+        <a href="#" data-de="Impressum" data-en="Legal notice">Mentions légales</a>
       </nav>
     </div>
   </footer>
