@@ -1,3 +1,11 @@
+// Adresse propre : l'accueil s'affiche sans « index.html »
+if (location.protocol === 'file:') {
+  // Sur l'ordinateur, sans serveur, « ./ » ouvrirait le dossier : on vise le fichier
+  document.querySelectorAll('a[href="./"]').forEach((a) => { a.href = 'index.html'; });
+} else if (location.pathname.endsWith('/index.html')) {
+  history.replaceState(null, '', location.pathname.slice(0, -'index.html'.length) + location.search + location.hash);
+}
+
 // Horaires (heure de Paris) — 0 = dimanche ... 6 = samedi, 24 = minuit
 const HOURS = {
   0: [9, 24],
