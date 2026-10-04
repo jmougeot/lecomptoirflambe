@@ -1,9 +1,10 @@
-// Adresse propre : l'accueil s'affiche sans « index.html »
+// Adresses propres : ni « index.html » ni « .html » dans la barre d'adresse
 if (location.protocol === 'file:') {
-  // Sur l'ordinateur, sans serveur, « ./ » ouvrirait le dossier : on vise le fichier
+  // Sur l'ordinateur, sans serveur, ces adresses n'existent pas : on vise les fichiers
   document.querySelectorAll('a[href="./"]').forEach((a) => { a.href = 'index.html'; });
-} else if (location.pathname.endsWith('/index.html')) {
-  history.replaceState(null, '', location.pathname.slice(0, -'index.html'.length) + location.search + location.hash);
+  document.querySelectorAll('a[href="carte"], a[href="infos"]').forEach((a) => { a.href = a.getAttribute('href') + '.html'; });
+} else if (/\/(index|carte|infos)\.html$/.test(location.pathname)) {
+  history.replaceState(null, '', location.pathname.replace(/index\.html$|\.html$/, '') + location.search + location.hash);
 }
 
 // Horaires (heure de Paris) — 0 = dimanche ... 6 = samedi, 24 = minuit
