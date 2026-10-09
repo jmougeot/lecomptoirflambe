@@ -90,7 +90,7 @@ Trois pages, toutes avec le même en-tête et le même pied de page :
 
 | Page | Fichier | Contenu |
 |---|---|---|
-| Accueil | `index.html` | Photo plein écran et nom, aperçu de trois tartes flambées, la maison (texte, trois points forts), quatre photos |
+| Accueil | `index.html` | Photo plein écran et nom, aperçu de trois tartes flambées, la maison (texte, trois points forts), six photos de la salle et du bar |
 | La carte | `carte.html` | Toute la carte, en trois colonnes sur ordinateur, avec onglets sur mobile, en français, allemand ou anglais |
 | Infos & horaires | `infos.html` | Adresse et itinéraire, tableau des horaires avec le jour en cours, téléphone, plan |
 
@@ -118,11 +118,11 @@ Peu nombreuses et lentes. Elles sont toutes coupées si le visiteur a demandé �
 
 ## 9. Les photos
 
-Photos provisoires pour l'instant, à remplacer par celles du restaurant.
+La galerie de l'accueil montre les vraies photos du restaurant (trois de la salle, trois du bar). La photo d'accueil reste provisoire.
 
 - **Lumière chaude**, tons bruns et dorés, pour s'accorder au fond crème et au brun.
 - **Photo d'accueil** : de préférence une tarte flambée qui sort du four, car c'est la seule grande photo du produit. Format paysage, sujet lisible même assombri, car le nom s'affiche par-dessus. Elle est recadrée en portrait sur téléphone : sujet au centre, ou fournir une seconde version portrait.
-- **Galerie** : la salle, le comptoir, la terrasse, des gens à table. Format portrait.
+- **Galerie** : la salle, le comptoir, la terrasse, des gens à table. Format portrait 3:4, six photos sur deux rangées (elles défilent sur téléphone). Recadrer pour montrer le moins de plafond possible et aucun reflet du photographe.
 - Pas de photo sur fond blanc, pas de montage, pas de texte dans l'image.
 
 ## 10. Le ton des textes
@@ -144,7 +144,8 @@ Photos provisoires pour l'instant, à remplacer par celles du restaurant.
 
 - [ ] Logo en deux versions (claire pour la photo d'accueil, foncée pour le fond crème), puis recalage des couleurs dessus
 - [ ] Décider si le grand nom en lettres reste sur la photo d'accueil une fois le logo en place
-- [ ] Photos du restaurant
+- [x] Photos de la salle et du bar dans la galerie
+- [ ] Photo d'accueil du restaurant (une tarte flambée qui sort du four)
 - [x] Vraie carte et vrais prix (repris des quatre cartes imprimées)
 - [ ] Relecture des traductions allemande et anglaise de la carte
 - [ ] Numéro de téléphone (factice : 03 00 00 00 00)

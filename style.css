@@ -345,10 +345,10 @@ h1, h2 { font: 400 clamp(2.6rem, 6.5vw, 5rem)/.98 var(--serif); letter-spacing: 
 /* ---------- Galerie ---------- */
 .gallery { padding: clamp(32px, 5vw, 64px) 0 clamp(16px, 3vw, 40px); }
 .gallery__track {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
-  width: min(1400px, 100% - 2 * var(--gutter)); margin-inline: auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  width: min(1200px, 100% - 2 * var(--gutter)); margin-inline: auto;
 }
-.gallery__track img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); }
+.gallery__track img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); }
 
 /* ---------- Infos ---------- */
 .infos { padding: clamp(48px, 7vw, 88px) 0 clamp(16px, 3vw, 40px); }
