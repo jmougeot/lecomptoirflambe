@@ -90,7 +90,7 @@ Trois pages, toutes avec le même en-tête et le même pied de page :
 
 | Page | Fichier | Contenu |
 |---|---|---|
-| Accueil | `index.html` | Photo plein écran et nom, aperçu de trois tartes flambées, la maison (texte, trois points forts), six photos de la salle et du bar |
+| Accueil | `index.html` | Photo plein écran et nom, aperçu de trois tartes flambées, la maison (texte, trois points forts), trois photos de la salle et du bar |
 | La carte | `carte.html` | Toute la carte, en trois colonnes sur ordinateur, avec onglets sur mobile, en français, allemand ou anglais |
 | Infos & horaires | `infos.html` | Adresse et itinéraire, tableau des horaires avec le jour en cours, téléphone, plan |
 
@@ -118,11 +118,11 @@ Peu nombreuses et lentes. Elles sont toutes coupées si le visiteur a demandé �
 
 ## 9. Les photos
 
-La galerie de l'accueil montre les vraies photos du restaurant (trois de la salle, trois du bar). La photo d'accueil reste provisoire.
+La galerie de l'accueil montre les vraies photos du restaurant (deux de la salle, une du bar). La photo d'accueil reste provisoire.
 
 - **Lumière chaude**, tons bruns et dorés, pour s'accorder au fond crème et au brun.
 - **Photo d'accueil** : de préférence une tarte flambée qui sort du four, car c'est la seule grande photo du produit. Format paysage, sujet lisible même assombri, car le nom s'affiche par-dessus. Elle est recadrée en portrait sur téléphone : sujet au centre, ou fournir une seconde version portrait.
-- **Galerie** : la salle, le comptoir, la terrasse, des gens à table. Format portrait 3:4, six photos sur deux rangées (elles défilent sur téléphone). Recadrer pour montrer le moins de plafond possible et aucun reflet du photographe.
+- **Galerie** : la salle, le comptoir, la terrasse, des gens à table. Format portrait 3:4, trois photos sur une rangée (elles défilent sur téléphone). Recadrer pour montrer le moins de plafond possible et aucun reflet du photographe.
 - Pas de photo sur fond blanc, pas de montage, pas de texte dans l'image.
 
 ## 10. Le ton des textes
