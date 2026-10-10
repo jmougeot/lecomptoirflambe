@@ -1,6 +1,6 @@
 /* =========================================================
    Le Comptoir Flambé — feuille de style
-   Couleurs provisoires : à caler sur le logo (variables ci-dessous)
+   Couleurs accordées au logo (variables ci-dessous)
    ========================================================= */
 /* ---------- Polices (hébergées sur le site, rien n'est chargé depuis Google) ---------- */
 @font-face {
@@ -168,7 +168,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   box-shadow: 0 1px 0 var(--line);
 }
 .brand { font: 400 1.6rem/1 var(--serif); text-decoration: none; white-space: nowrap; }
-.brand__logo { display: block; height: 46px; width: auto; }
+/* Le tampon rond dépasse sous l'en-tête, comme un sceau posé sur le filet */
+.header .brand { align-self: flex-start; margin-top: 8px; }
+.brand__logo { display: block; width: 92px; height: 92px; }
 .header__nav { display: flex; gap: 32px; }
 .header__nav a { position: relative; font-size: .92rem; text-decoration: none; opacity: .8; transition: opacity .2s; }
 .header__nav a:hover, .header__nav a[aria-current] { opacity: 1; }
@@ -442,6 +444,9 @@ html:not(.js) .infos__map { display: none; }
 @media (max-width: 960px) {
   .header__nav { display: none; }
   .burger { display: block; }
+  /* Le tampon rentre dans l'en-tête : dessous, il recouvrirait les onglets de la carte */
+  .header .brand { align-self: center; margin-top: 0; }
+  .brand__logo { width: 56px; height: 56px; }
   .house__grid, .infos__grid { grid-template-columns: 1fr; }
   .infos__map > * { aspect-ratio: 16 / 10; }
 }
@@ -450,7 +455,7 @@ html:not(.js) .infos__map { display: none; }
   :root { --header-h: 62px; }
   .header__cta { display: none; }
   .brand { font-size: 1.45rem; }
-  .brand__logo { height: 42px; }
+  .brand__logo { width: 52px; height: 52px; }
   .hero__title { line-height: .92; }
   .btn { min-height: 48px; padding: 0 26px; }
   .chips { justify-content: space-between; gap: 16px; overflow-x: auto; scrollbar-width: none; }

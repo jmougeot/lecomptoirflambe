@@ -29,7 +29,7 @@ Il ne fait **pas** de réservation en ligne. Les seules actions sont « Voir la 
 
 ## 3. Les couleurs
 
-Provisoires : elles seront recalées sur le logo dès sa réception. Tout se règle dans les variables en tête de `style.css`.
+Elles s'accordent avec le logo, dont le rouge (`#AF1914`), le brun (`#1E1009`) et le crème (`#FAF7F0`) sont à quelques nuances près ceux du site : pas de recalage à faire. Tout se règle dans les variables en tête de `style.css`.
 
 | Rôle | Variable | Valeur | Usage |
 |---|---|---|---|
@@ -74,7 +74,8 @@ Elle passe **uniquement par le visuel** : couleurs, motifs, animaux, emblèmes. 
 ## 6. Les composants
 
 - **Boutons** : rectangulaires, coins de 4 px, texte en petites majuscules espacées, 50 px de haut (48 sur mobile). Trois variantes : rouge Alsace avec filet crème intérieur, façon plaque d'enseigne (action principale, réservé à l'accès à la carte), contour fin (action secondaire), cadre crème (sur la photo d'accueil). Écartés car trop génériques : forme pilule, verre dépoli, bouton crème ou blanc.
-- **En-tête** : fixe, 68 px (62 sur mobile). Transparent sur la photo d'accueil, crème translucide ensuite. Sur ordinateur : nom, trois liens (Accueil, La carte, Infos & horaires) et « Appeler ». Pas de bouton rouge dans l'en-tête : il doublait le lien « La carte ». Sur mobile : le nom et le mot « Menu » (zone tactile de 44 px).
+- **En-tête** : fixe, 68 px (62 sur mobile). Transparent sur la photo d'accueil, crème translucide ensuite. Sur ordinateur : logo, trois liens (Accueil, La carte, Infos & horaires) et « Appeler ». Pas de bouton rouge dans l'en-tête : il doublait le lien « La carte ». Sur mobile : le logo et le mot « Menu » (zone tactile de 44 px).
+- **Logo** : le tampon rond à la cigogne (`images/logo-tampon.webp`, détouré, disque crème conservé pour rester lisible sur la photo et sur le brun). Sur ordinateur il fait 92 px et dépasse de 32 px sous l'en-tête, comme un sceau posé sur le filet. Sous 960 px il rentre dans l'en-tête (56 px, puis 52 px sur mobile) pour ne pas recouvrir les onglets de la carte. Il figure aussi sur les deux aperçus de partage (`images/apercu-*.jpg`). La version grand format détourée est dans `logo/logo-tampon-detoure.png`.
 - **Menu plein écran** (mobile et tablette) : fond brun, trois grands liens en Instrument Serif, la page en cours en italique, adresse et téléphone en bas, village au trait tout en bas.
 - **Liste de plats** : nom en demi-gras, ingrédients en gris dessous, prix aligné à droite, filet fin entre chaque plat. Pas de photo par plat, pas de pictogramme.
 - **Onglets de la carte** (mobile et tablette) : petites majuscules, soulignement rouge sur la catégorie en cours, collés sous l'en-tête pendant le défilement.
@@ -142,7 +143,7 @@ La galerie de l'accueil montre les vraies photos du restaurant (deux de la salle
 
 ## 12. En attente
 
-- [ ] Logo en deux versions (claire pour la photo d'accueil, foncée pour le fond crème), puis recalage des couleurs dessus
+- [x] Logo : le tampon rond, une seule version pour tous les fonds
 - [ ] Décider si le grand nom en lettres reste sur la photo d'accueil une fois le logo en place
 - [x] Photos de la salle et du bar dans la galerie
 - [ ] Photo d'accueil du restaurant (une tarte flambée qui sort du four)
