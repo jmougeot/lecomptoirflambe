@@ -65,7 +65,7 @@ Elle passe **uniquement par le visuel** : couleurs, motifs, animaux, emblèmes. 
 | **Village en silhouette + cigogne en vol** | Transition entre le contenu et le pied de page, sur toutes les pages | Le motif signature, et le seul village du bas de page. Silhouette brune, fenêtres crème, une seule cigogne au nid. Une cigogne traverse le ciel puis disparaît avant de repasser. |
 | **Nappe à carreaux rouge et crème** | Bande de 24 px sous la photo d'accueil et sous le titre des pages intérieures | Une seule bande par page. |
 | **Personnages en costume alsacien** (deux Alsaciennes, deux Alsaciens) | De part et d'autre des grands titres centrés (un couple), à droite du titre « La maison » (un seul) | En couleurs, pieds alignés sur le bas du titre, de 64 à 104 px de haut selon l'écran. Tirés au hasard à chaque visite. Ils se balancent une fois à l'arrivée, comme un salut. Fichiers `images/bonhomme-1.svg` à `4` : à remplacer par de vraies illustrations si besoin. |
-| **Maison à colombage** | Icône d'onglet du navigateur | Trait crème sur fond rouge. |
+| **Tasse de café et tarte flambée** | Icône du site : onglet du navigateur, résultats Google, écran d'accueil du téléphone | Rouge et brun sur fond crème, coins arrondis. Le dessin tient dans un cercle, car Google recadre les icônes en rond. Fichiers `favicon.ico`, `images/favicon-96.png`, `images/apple-touch-icon.png` ; image d'origine dans `logo/icone-tasse-tarte.png`. |
 
 **Écartés, à ne pas reproposer** : bandeau défilant d'expressions, frise de maisons colorées, autocollant bretzel, motifs sur fond de section, second village au trait dans le pied de page, croix de colombage et buste d'Alsacienne en silhouette devant les surtitres.
 
