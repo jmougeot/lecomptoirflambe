@@ -426,6 +426,8 @@ html:not(.js) .infos__map { display: none; }
 .footer__links { display: flex; justify-content: center; gap: 28px; font-size: .9rem; }
 .footer__links a { color: var(--on-dark-muted); text-decoration: none; }
 .footer__links a:hover { color: var(--on-dark); }
+.footer__credit { margin: 28px 0 0; font-size: .78rem; color: var(--on-dark-muted); }
+.footer__credit a:hover { color: var(--on-dark); }
 
 /* Village à colombages, dessiné au trait (bas du menu plein écran) */
 .village { display: block; margin-top: 8px; color: var(--on-dark); }

@@ -81,7 +81,7 @@ Elle passe **uniquement par le visuel** : couleurs, motifs, animaux, emblèmes. 
 - **Onglets de la carte** (mobile et tablette) : petites majuscules, soulignement rouge sur la catégorie en cours, collés sous l'en-tête pendant le défilement.
 - **Pastille d'ouverture** : point vert ou corail + « Ouvert maintenant · jusqu'à 23h » ou « Fermé · ouvre à 8h », calculé à l'heure de Kaysersberg.
 - **Photos** : coins arrondis de 18 px, formats portrait (4:5 et 3:4).
-- **Pied de page** : fond brun, nom en grand, trois colonnes (adresse, horaires, téléphone). Le village en silhouette le précède ; rien en dessous.
+- **Pied de page** : fond brun, nom en grand, trois colonnes (adresse, horaires, téléphone). Le village en silhouette le précède ; rien en dessous. Tout en bas du pied de page, une ligne de crédit discrète : « Site réalisé par Jacques Mougeot, co-fondateur d'Azerit », avec un lien vers azerit.tech.
 - **Choix de la langue** : « FR · DE · EN » dans l'en-tête (ordinateur et tablette) et au bas du menu plein écran (mobile), la langue en cours soulignée. Il reste discret : la langue se règle toute seule, personne n'a à choisir.
 - **Plan Google** (page infos) : un cadre avec le bouton « Afficher le plan ». Le plan ne se charge qu'au clic.
 
